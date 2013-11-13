@@ -911,8 +911,9 @@ class Node {
 	public static var dgram(get,null) :NodeUDP ;
 	public static var dns(get,null) : NodeDns;
 	public static var fs(get,null) : NodeFS;
-	public static var http(get,null) : NodeHttp;
+    public static var http(get,null) : NodeHttp;
 	public static var https(get,null) : NodeHttps;
+	public static var mongo(get,null) : Dynamic;
 	public static var net(get,null) : NodeNet;
 	public static var os(get,null) : NodeOs;
 	public static var path(get,null) : NodePath;
@@ -959,6 +960,7 @@ class Node {
 	static inline function get_url() : NodeUrl return require("url");
 	static inline function get_util() : NodeUtil return require("util");
 	static inline function get_vm() : NodeVM return require("vm");
+	static inline function get_net() : NodeNet return require("mongojs");
 
 	static inline function get___filename() : String return untyped __js__('__filename');
 	static inline function get___dirname() : String return untyped __js__('__dirname');
